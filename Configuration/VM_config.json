@@ -1,0 +1,102 @@
+{
+    "apiVersion": "2024-07-01",
+    "id": "/subscriptions/af5ede2e-8662-427e-b4c1-1441016cd738/resourceGroups/HoneyPot1/providers/Microsoft.Compute/virtualMachines/HoneyPot1-vm",
+    "name": "HoneyPot1-vm",
+    "type": "microsoft.compute/virtualmachines",
+    "location": "westus2",
+    "zones": [
+        "1"
+    ],
+    "properties": {
+        "hardwareProfile": {
+            "vmSize": "Standard_D2s_v3"
+        },
+        "provisioningState": "Succeeded",
+        "vmId": "d225d370-2735-453b-886c-ed6cd9c31cc2",
+        "additionalCapabilities": {
+            "hibernationEnabled": false
+        },
+        "storageProfile": {
+            "imageReference": {
+                "publisher": "MicrosoftWindowsDesktop",
+                "offer": "Windows-10",
+                "sku": "win10-22h2-pro-g2",
+                "version": "latest",
+                "exactVersion": "19045.5131.241109"
+            },
+            "osDisk": {
+                "osType": "Windows",
+                "name": "HoneyPot1-vm_disk1_514d7c5635d64b7e9c13584045758525",
+                "createOption": "FromImage",
+                "caching": "ReadWrite",
+                "managedDisk": {
+                    "storageAccountType": "Premium_LRS",
+                    "id": "/subscriptions/af5ede2e-8662-427e-b4c1-1441016cd738/resourceGroups/HoneyPot1/providers/Microsoft.Compute/disks/HoneyPot1-vm_disk1_514d7c5635d64b7e9c13584045758525"
+                },
+                "deleteOption": "Delete",
+                "diskSizeGB": 127
+            },
+            "dataDisks": [],
+            "diskControllerType": "SCSI"
+        },
+        "osProfile": {
+            "computerName": "HoneyPot1-vm",
+            "adminUsername": "kanadmin",
+            "windowsConfiguration": {
+                "provisionVMAgent": true,
+                "enableAutomaticUpdates": true,
+                "patchSettings": {
+                    "patchMode": "AutomaticByOS",
+                    "assessmentMode": "ImageDefault",
+                    "enableHotpatching": false
+                }
+            },
+            "secrets": [],
+            "allowExtensionOperations": true,
+            "requireGuestProvisionSignal": true
+        },
+        "securityProfile": {
+            "uefiSettings": {
+                "secureBootEnabled": true,
+                "vTpmEnabled": true
+            },
+            "securityType": "TrustedLaunch"
+        },
+        "networkProfile": {
+            "networkInterfaces": [
+                {
+                    "id": "/subscriptions/af5ede2e-8662-427e-b4c1-1441016cd738/resourceGroups/HoneyPot1/providers/Microsoft.Network/networkInterfaces/honeypot1-vm907_z1",
+                    "properties": {
+                        "deleteOption": "Detach"
+                    }
+                }
+            ]
+        },
+        "diagnosticsProfile": {
+            "bootDiagnostics": {
+                "enabled": true
+            }
+        },
+        "licenseType": "Windows_Client",
+        "timeCreated": "2024-12-03T20:50:55.045Z"
+    },
+    "resources": [
+        {
+            "name": "MicrosoftMonitoringAgent",
+            "id": "/subscriptions/af5ede2e-8662-427e-b4c1-1441016cd738/resourceGroups/HoneyPot1/providers/Microsoft.Compute/virtualMachines/HoneyPot1-vm/extensions/MicrosoftMonitoringAgent",
+            "type": "Microsoft.Compute/virtualMachines/extensions",
+            "location": "westus2",
+            "properties": {
+                "autoUpgradeMinorVersion": true,
+                "provisioningState": "Succeeded",
+                "publisher": "Microsoft.EnterpriseCloud.Monitoring",
+                "type": "MicrosoftMonitoringAgent",
+                "typeHandlerVersion": "1.0",
+                "settings": {
+                    "workspaceId": "e031c369-0090-4655-9978-aec053cca96a"
+                }
+            }
+        }
+    ],
+    "etag": "\"2\""
+}
