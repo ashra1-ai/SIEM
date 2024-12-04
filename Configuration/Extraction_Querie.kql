@@ -1,0 +1,15 @@
+// Extract key fields from raw data
+FAILED_RDP_GEO_LOCATION_CL
+| extend latitude = extract(@"latitude:([-0-9\.]+)", 1, RawData)
+| extend longitude = extract(@"longitude:([-0-9\.]+)", 1, RawData)
+| extend destinationhost = extract(@"destinationhost:([^,]+)", 1, RawData)
+| extend username = extract(@"username:([^,]+)", 1, RawData)
+| extend sourcehost = extract(@"sourcehost:([^,]+)", 1, RawData)
+| extend country = extract(@"country:([^,]+)", 1, RawData)
+
+// Aggregate event count by country
+| summarize EventCount = count() by country
+
+// Project relevant fields
+| project country, EventCount
+| sort by EventCount desc
