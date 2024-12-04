@@ -11,7 +11,7 @@ $XMLFilter = @'
 
 # Define the log file path and API key
 $LOGFILE_PATH = "C:\Logs\FailedRDP.log"
-$API_KEY = "505093a2a0f64619a18df88aa2676d89"
+$API_KEY = "$($Your_API_key)"
 
 # Ensure the log file exists or create it
 if (-Not (Test-Path $LOGFILE_PATH)) {
