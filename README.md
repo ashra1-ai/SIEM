@@ -109,7 +109,7 @@ cd <repository_folder>
                     <td>Preconfigured workbook for Sentinel visualization.</td>
                 </tr>
                 <tr>
-                    <td><code>queries.kql</code></td>
+                    <td><code>Extraction_Querie.kql</code></td>
                     <td>KQL queries for extracting and analyzing data in Sentinel.</td>
                 </tr>
                 <tr>
