@@ -101,7 +101,7 @@ cd <repository_folder>
             </thead>
             <tbody>
                 <tr>
-                    <td><code>RDP_Honeypot_Script.ps1</code></td>
+                    <td><code>untitled.ps1</code></td>
                     <td>PowerShell script for log extraction and geolocation data retrieval.</td>
                 </tr>
                 <tr>
